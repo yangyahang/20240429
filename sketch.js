@@ -9,6 +9,7 @@ function setup() {
   captureGraphics=createGraphics(capture_width,capture_height)
   captureGraphics.translate(capture_width,0)
   captureGraphics.scale(-1,1)
+  capture.hide()
 }
 
 function draw() {
