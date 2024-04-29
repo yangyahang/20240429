@@ -35,13 +35,13 @@ function draw() {
     for(var y=0;y<capture_height;y=y+span){
       var pixel = captureGraphics.get(x,y)
       fill(pixel)
-      if(radioElement.value()=="圓點"){
+      if(radioElement.value()=="圓點"||radioElement.value()==""){
         ellipse(x,y,span) 
       }
       if(radioElement.value()=="方塊"){
         rect(x,y,span)  
-      } 
+      }
+     }
     }
-   }
   pop()
 }
