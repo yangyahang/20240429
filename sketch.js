@@ -2,6 +2,7 @@ var captureGraphics
 var capture_width=640
 var capture_height=480
 var radioElement
+var span
 function setup() {
   createCanvas(windowWidth,windowHeight);
   capture=createCapture(VIDEO);
