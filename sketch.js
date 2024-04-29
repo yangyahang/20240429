@@ -2,6 +2,7 @@ var captureGraphics
 var capture_width=640
 var capture_height=480
 var span=5
+var radioElement
 function setup() {
   createCanvas(windowWidth,windowHeight);
   capture=createCapture(VIDEO);
@@ -12,13 +13,14 @@ function setup() {
   capture.hide()
   //============================================================以上為螢幕設定
   radioElement=createRadio()
-  radioElement.position(width*4/5,20)
+  radioElement.position(width/2-300,20)
   radioElement.option("圓點")
   radioElement.option("方塊")
-  radioElement.style("color","#fca311")
+  radioElement.style("font-size","25px")
+  radioElement.style("color","#fef9ef")
   radioElement.style("background","#14213d")
-  radioElement.style("width","7%")
-  radioElement.style("border","3px solid #e5e5e5")
+  radioElement.style("width","16%")
+  radioElement.style("border","2px solid #fca3113")
   radioElement.style("border-radius","25px")
 }
 
@@ -33,7 +35,13 @@ function draw() {
     for(var y=0;y<capture_height;y=y+span){
       var pixel = captureGraphics.get(x,y)
       fill(pixel)
-      rect(x,y,span)
+      if(radioElement.value()=="圓點"){
+        ellipse(x,y,span) 
+      }
+      if(radioElement.value()=="方塊"){
+        rect(x,y,span)  
+      }
+      
     }
    }
   pop()
