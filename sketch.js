@@ -57,7 +57,7 @@ function draw() {
         fill(0)
         ellipse(x,y,5)
       }
-      if(radioElement.value()=="炫紅"){
+      if(radioElement.value()=="文字"){
         const density = 'Ñ@#W$9876543210?!abc;:+=-,._ ';
         let txt = "一二三四五田雷電龕龘"
         bk=(pixel[0]+pixel[1]+pixel[2])/3
