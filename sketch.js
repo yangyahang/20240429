@@ -39,8 +39,7 @@ function draw() {
       }
       if(radioElement.value()=="方塊"){
         rect(x,y,span)  
-      }
-      
+      } 
     }
    }
   pop()
